@@ -1,10 +1,11 @@
 import pytest
 import requests
 
+
 @pytest.mark.http
 def test_first_request():
-  r = requests.get('https://api.github.com/zen')
-  print(f"The response is: {r.text}")
+    r = requests.get('https://api.github.com/zen')
+    print(f"The response is: {r.text}")
 
 
 @pytest.mark.http
@@ -18,5 +19,5 @@ def test_second_request():
 
 @pytest.mark.http
 def test_status_code_request():
-  request = requests.get("https://api.github.com/users/some_user")
-  assert request.status_code == 404
+    request = requests.get("https://api.github.com/users/some_user")
+    assert request.status_code == 404
